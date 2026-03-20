@@ -2,15 +2,14 @@ public class InitialClass
 {
     public static void Main(string[] args)
     {
-        // Criando um objeto da classe Pessoa
-        Pessoa pessoa1 = new Pessoa("João", 30);
+        // Criando uma conta bancária
+        Bank b1 = new Bank("0001", "Daniel Knupp", 3000);
+        Bank b2 = new Bank("0002", "Maria Silva", 5000);
+        Bank b3 = new Bank("0003", "Mateus Francisco", 2000);
 
-        // Acessando os atributos e métodos do objeto
-        Console.WriteLine("Nome: " + pessoa1.Nome);
-        Console.WriteLine("Idade: " + pessoa1.Idade);
+        b1.Deposit(500);
 
-        pessoa1.FazerAniversario();
-        Console.WriteLine("Idade após aniversário: " + pessoa1.Idade);
+        Console.WriteLine("Saldo de " + b1.AccountHolder() + ": " + b1.Balance());
     }
 }
 
@@ -43,8 +42,9 @@ public class Bank
     private string accountHolder;
     private decimal balance;
 
-    public Bank(string accountHolder, decimal initialBalance = 0)
+    public Bank(string userId, string accountHolder, decimal initialBalance = 0)
     {
+        this.userId = userId;
         this.accountHolder = accountHolder;
         this.balance = initialBalance;
     }

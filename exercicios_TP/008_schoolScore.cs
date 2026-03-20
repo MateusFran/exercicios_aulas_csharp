@@ -11,7 +11,7 @@ public class SchoolScore
             return;
         }
 
-         if (score >= 9) print("Excelente!");
+        if (score >= 9) print("Excelente!");
         else if (score >= 8) print("Bom");
         else if (score >= 7) print("Regular");
         else print("Insuficiente");

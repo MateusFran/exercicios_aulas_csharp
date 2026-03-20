@@ -1,3 +1,6 @@
+using System.ComponentModel;
+using Microsoft.Win32.SafeHandles;
+
 public class DateDifference
 {
     public static void Main()
@@ -17,15 +20,15 @@ public class DateDifference
 
         TimeSpan ts = dataFim - dataInicio;
 
-        int anos = dataFim.Year - dataInicio.Year;
-        int meses = dataFim.Month - dataInicio.Month;
+        int anos = dataFim.Year - dataInicio.Year; // 2026 - 2020 = 6 anos
+        int meses = dataFim.Month - dataInicio.Month; // 5 - 3 - 2 meses
         int dias = dataFim.Day - dataInicio.Day;
 
         if (dias < 0)
         {
             meses--;
             DateTime mesAnterior = dataFim.AddMonths(-1);
-            dias += DateTime.DaysInMonth(mesAnterior.Year, mesAnterior.Month);
+            dias += DateTime.DaysInMonth(mesAnterior.Year, mesAnterior.Month); // 28
         }
 
         if (meses < 0)

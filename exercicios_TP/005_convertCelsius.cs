@@ -9,7 +9,7 @@ public class ConvertCelsius
         if (!float.TryParse(input, out celsius))
         {
             print("Entrada inválida. Por favor, insira um número.");
-            return;
+            return; // Programa encerrado devido à entrada inválida
         }
 
         print($"{celsius}°C é igual a {ConvertToFahrenheit(celsius).ToString("F2")}°F e {ConvertToKelvin(celsius).ToString("F2")} K.");
