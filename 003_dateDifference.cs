@@ -1,5 +1,3 @@
-using System;
-
 public class DateDifference
 {
     public static void Main()
