@@ -32,14 +32,9 @@ public class DateOnlyExample
         print($"You are {years} years, {months} months, and {days} days old.");
     }
 
+    // Meu comando de print
     public static void print(string message)
     {
         Console.WriteLine(message);
     }
 }
-
-
-/* This example produces output similar to the following:
- * 
- * Today is 12/28/2022
-*/
